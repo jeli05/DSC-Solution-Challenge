@@ -1,13 +1,7 @@
 import * as React from 'react';
-import {
-  TouchableOpacity,
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView
-} from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
-const SettingsScreen = ({ route, navigation }) => {
+const SettingsScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 16 }}>
@@ -23,29 +17,8 @@ const SettingsScreen = ({ route, navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            Settings
+            Account settings: Feel free to edit this page as you wish
           </Text>
-          {/* <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Home')
-            }>
-            <Text>Go to Home Tab</Text>
-          </TouchableOpacity> */}
-          {/* <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Details')
-            }>
-            <Text>Open Detail Screen</Text>
-          </TouchableOpacity> */}
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Profile')
-            }>
-            <Text>Profile</Text>
-          </TouchableOpacity>
         </View>
         <Text
           style={{
@@ -65,13 +38,4 @@ const SettingsScreen = ({ route, navigation }) => {
     </SafeAreaView>
   );
 }
-const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    width: 300,
-    marginTop: 16,
-  },
-});
 export default SettingsScreen;

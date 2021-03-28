@@ -20,6 +20,7 @@ import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import { Settings } from 'react-native';
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
 
@@ -47,27 +48,27 @@ function HomeStack() {
   );
 }
 
-function SettingsStack() {
+function ProfileStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Settings"
+      initialRouteName="Profile"
       screenOptions={{
         headerStyle: { backgroundColor: '#42f44b' },
         headerTintColor: '#fff',
         headerTitleStyle: { fontWeight: 'bold' }
       }}>
       <Stack.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{ title: 'Setting Page' }}/>
-      <Stack.Screen
-        name="Details"
-        component={DetailsScreen}
-        options={{ title: 'Details Page' }}/>
-      <Stack.Screen
         name="Profile"
         component={ProfileScreen}
         options={{ title: 'Profile Page' }}/>
+      {/* <Stack.Screen
+        name="Details"
+        component={DetailsScreen}
+        options={{ title: 'Details Page' }}/> */}
+      <Stack.Screen
+        name="Settings"
+        component={SettingsScreen}
+        options={{ title: 'Settings Page' }}/>
     </Stack.Navigator>
   );
 }
@@ -94,10 +95,10 @@ function App() {
             ),
           }}  />
         <Tab.Screen
-          name="SettingsStack"
-          component={SettingsStack}
+          name="ProfileStack"
+          component={ProfileStack}
           options={{
-            tabBarLabel: 'Settings',
+            tabBarLabel: 'Profile',
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="account-settings"
