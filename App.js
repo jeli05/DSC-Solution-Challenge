@@ -20,6 +20,7 @@ import HomeScreen from './screens/HomeScreen';
 import DetailsScreen from './screens/DetailsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import RoomScreen from './screens/RoomScreen';
 import { Settings } from 'react-native';
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
@@ -44,6 +45,10 @@ function HomeStack() {
           name="Details"
           component={DetailsScreen}
           options={{ title: 'Course Page' }} />
+        <Stack.Screen
+          name="Room"
+          component={RoomScreen}
+          options={{ title: 'Room Call' }} />
       </Stack.Navigator>
   );
 }
