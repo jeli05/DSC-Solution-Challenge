@@ -28,35 +28,35 @@ const DetailsScreen = ({navigation}) => {
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Room')
             }>
             <Text>General Course Room</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Room')
             }>
             <Text>Room 1</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Room')
             }>
             <Text>Room 2</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Room')
             }>
             <Text>Room 3</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Room')
             }>
             <Text>Room 4</Text>
           </TouchableOpacity>
