@@ -42,7 +42,7 @@ function HomeStack() {
         <Stack.Screen
           name="Details"
           component={DetailsScreen}
-          options={{ title: 'Details Page' }} />
+          options={{ title: 'Course Page' }} />
       </Stack.Navigator>
   );
 }
