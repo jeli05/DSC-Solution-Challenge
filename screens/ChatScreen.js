@@ -1,16 +1,16 @@
 import * as React from 'react';
 import {
-  TouchableOpacity,
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView
-} from 'react-native';
+    TouchableOpacity,
+    StyleSheet,
+    View,
+    Text,
+    SafeAreaView
+  } from 'react-native';
 
-const FriendsScreen = ({ route, navigation }) => {
+const ChatScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, padding: 16 }}>
+      <View style={{ flex: 1 , padding: 16}}>
         <View
           style={{
             flex: 1,
@@ -23,15 +23,8 @@ const FriendsScreen = ({ route, navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            My Friends
+            A screenshot of the chat interface should suffice for now
           </Text>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Messages')
-            }>
-            <Text>My Messages</Text>
-          </TouchableOpacity>
         </View>
         <Text
           style={{
@@ -51,13 +44,14 @@ const FriendsScreen = ({ route, navigation }) => {
     </SafeAreaView>
   );
 }
+
 const styles = StyleSheet.create({
-  button: {
-    alignItems: 'center',
-    backgroundColor: '#DDDDDD',
-    padding: 10,
-    width: 300,
-    marginTop: 16,
-  },
-});
-export default FriendsScreen;
+    button: {
+      alignItems: 'center',
+      backgroundColor: '#DDDDDD',
+      padding: 10,
+      width: 300,
+      marginTop: 16,
+    },
+  });
+export default ChatScreen;
