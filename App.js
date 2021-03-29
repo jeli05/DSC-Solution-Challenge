@@ -21,6 +21,7 @@ import DetailsScreen from './screens/DetailsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import RoomScreen from './screens/RoomScreen';
+import FriendsScreen from './screens/FriendsScreen';
 import { Settings } from 'react-native';
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
@@ -49,6 +50,31 @@ function HomeStack() {
           name="Room"
           component={RoomScreen}
           options={{ title: 'Room Call' }} />
+      </Stack.Navigator>
+  );
+}
+
+function FriendsStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="Friends"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#42f44b' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Friends"
+          component={FriendsScreen}
+          options={{ title: 'My Friends' }}/>
+        {/* <Stack.Screen
+          name="Details"
+          component={DetailsScreen}
+          options={{ title: 'Course Page' }} />
+        <Stack.Screen
+          name="Room"
+          component={RoomScreen}
+          options={{ title: 'Room Call' }} /> */}
       </Stack.Navigator>
   );
 }
@@ -94,6 +120,19 @@ function App() {
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="home"
+                color={color}
+                size={size}
+              />
+            ),
+          }}  />
+        <Tab.Screen
+          name="FriendsStack"
+          component={FriendsStack}
+          options={{
+            tabBarLabel: 'Friends',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="account-group"
                 color={color}
                 size={size}
               />

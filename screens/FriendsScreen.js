@@ -7,7 +7,7 @@ import {
   SafeAreaView
 } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const FriendsScreen = ({ route, navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 16 }}>
@@ -23,50 +23,28 @@ const HomeScreen = ({ navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            My courses
+            My Friends
           </Text>
           {/* <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate(
-                'SettingsStack', { screen: 'Settings' }
-              )}>
-            <Text>Go to settng Tab</Text>
+              () => navigation.navigate('Home')
+            }>
+            <Text>Go to Home Tab</Text>
+          </TouchableOpacity> */}
+          {/* <TouchableOpacity
+            style={styles.button}
+            onPress={
+              () => navigation.navigate('Details')
+            }>
+            <Text>Open Detail Screen</Text>
           </TouchableOpacity> */}
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Settings')
             }>
-            <Text>ECE 216</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Details')
-            }>
-            <Text>ECE 221</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Details')
-            }>
-            <Text>ECE 231</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Details')
-            }>
-            <Text>ECE 243</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Details')
-            }>
-            <Text>ECE 297</Text>
+            <Text>Settings</Text>
           </TouchableOpacity>
         </View>
         <Text
@@ -87,7 +65,6 @@ const HomeScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
@@ -97,4 +74,4 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
 });
-export default HomeScreen;
+export default FriendsScreen;
