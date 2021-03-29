@@ -22,6 +22,8 @@ import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import RoomScreen from './screens/RoomScreen';
 import FriendsScreen from './screens/FriendsScreen';
+import MessagesScreen from './screens/MessagesScreen';
+import ChatScreen from './screens/ChatScreen';
 import { Settings } from 'react-native';
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
@@ -67,14 +69,14 @@ function FriendsStack() {
           name="Friends"
           component={FriendsScreen}
           options={{ title: 'My Friends' }}/>
-        {/* <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
-          options={{ title: 'Course Page' }} />
         <Stack.Screen
-          name="Room"
-          component={RoomScreen}
-          options={{ title: 'Room Call' }} /> */}
+          name="Messages"
+          component={MessagesScreen}
+          options={{ title: 'My Messages' }} />
+        <Stack.Screen
+          name="Chat"
+          component={ChatScreen}
+          options={{ title: 'Chat with ___' }} />
       </Stack.Navigator>
   );
 }
@@ -92,10 +94,6 @@ function ProfileStack() {
         name="Profile"
         component={ProfileScreen}
         options={{ title: 'Profile Page' }}/>
-      {/* <Stack.Screen
-        name="Details"
-        component={DetailsScreen}
-        options={{ title: 'Details Page' }}/> */}
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
