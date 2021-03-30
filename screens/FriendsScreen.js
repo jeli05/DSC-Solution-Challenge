@@ -23,14 +23,14 @@ const FriendsScreen = ({ route, navigation }) => {
               textAlign: 'center',
               marginBottom: 16
             }}>
-            My Friends
+            Friends
           </Text>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Messages')
+              () => navigation.navigate('FriendInformation')
             }>
-            <Text>My Messages</Text>
+            <Text>Friends Information</Text>
           </TouchableOpacity>
         </View>
         <Text
