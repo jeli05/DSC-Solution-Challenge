@@ -21,12 +21,37 @@ import DetailsScreen from './screens/DetailsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import RoomScreen from './screens/RoomScreen';
+import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import CreateProfileScreen from './screens/CreateProfileScreen';
 import { Settings } from 'react-native';
+
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
+function LoginStack() {
+  return (
+    <Stack.Navigator
+      initialRouteName="Login">
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ title: 'Login Page'}} />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen} 
+        options={{ title: 'Sign Up Page'}}/>
+      <Stack.Screen
+        name="CreateProfile"
+        component={CreateProfileScreen}
+        options={{ title: 'Create Profile Page'}} />
+    </Stack.Navigator>
+  );
+}
+
 
 function HomeStack() {
   return (
@@ -86,6 +111,10 @@ function App() {
         tabBarOptions={{
           activeTintColor: '#42f44b',
         }}>
+        <Tab.Screen
+          name="Login"
+          component={LoginStack}
+        />
         <Tab.Screen
           name="HomeStack"
           component={HomeStack}
