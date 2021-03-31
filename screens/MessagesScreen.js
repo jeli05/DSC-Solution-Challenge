@@ -81,6 +81,7 @@ const MessagesScreen = ({navigation}) => {
                   rounded
                   title={l.avatar}
                   activeOpacity={0.7}
+                  onPress={ () => navigation.navigate('FriendInformation') }
                 />
                 <ListItem.Content>
                   <ListItem.Title>{l.name}</ListItem.Title>

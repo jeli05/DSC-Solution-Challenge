@@ -1,5 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 import {View, SafeAreaView, StyleSheet, TouchableOpacity} from 'react-native';
+import { Icon } from 'react-native-elements';
 import {
   Avatar,
   Title,
@@ -8,15 +9,31 @@ import {
   TouchableRipple,
 } from 'react-native-paper';
 
-
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const ProfileScreen = ({ route, navigation }) => {
    return (
     <SafeAreaView style={styles.container}>
 
       <View style={styles.userInfoSection}>
+      <View
+          style={{
+            marginTop: 15,
+            flex: 0,
+            alignItems: 'flex-end',
+            justifyContent: 'center',
+          }}>
+          <Icon
+            name='gear'
+            type='evilicon'
+            color='#517fa4'
+            onPress={
+              () => navigation.navigate('Settings')
+            }
+          />
+        </View>
         <View style={{flexDirection: 'row', marginTop: 15}}>
+
           <Avatar.Image 
             //source={{
             //pic of person  ,
@@ -43,43 +60,43 @@ const ProfileScreen = ({ route, navigation }) => {
 
       <View style={styles.userInfoSection}>
         <View style={styles.row}>
-          <Icon name="Bio" color="#777777" size={40}/>
+          {/* <Icon name="Bio" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>Add anything you want</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Name" color="#777777" size={40}/>
+          {/* <Icon name="profile" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>First name_last name</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Email" color="#777777" size={40}/>
+          {/* <Icon name="Email" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>emailid@mail.utoronto.ca</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Section" color="#777777" size={40}/>
+          {/* <Icon name="Section" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>101/102</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Preferred studying time" color="#777777" size={40}/>
+          {/* <Icon name="Preferred studying time" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>24 hour clock</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Timezone" color="#777777" size={40}/>
+          {/* <Icon name="Timezone" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>__EST time</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Favorite Course" color="#777777" size={40}/>
+          {/* <Icon name="Favorite Course" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>JRE 420</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Needs help on" color="#777777" size={40}/>
+          {/* <Icon name="Needs help on" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>ECE291</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Working on" color="#777777" size={40}/>
+          {/* <Icon name="Working on" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>APS263</Text>
         </View>
         <View style={styles.row}>
-          <Icon name="Hobbies" color="#777777" size={40}/>
+          {/* <Icon name="Hobbies" color="#777777" size={40}/> */}
           <Text style={{color:"#777777", marginLeft: 30}}>Activities of choice</Text>
         </View>
       </View>

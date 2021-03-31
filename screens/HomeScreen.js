@@ -21,52 +21,49 @@ const HomeScreen = ({ navigation }) => {
             style={{
               fontSize: 25,
               textAlign: 'center',
-              marginBottom: 16
+              // marginBottom: 0
             }}>
             My courses
           </Text>
-          {/* <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate(
-                'SettingsStack', { screen: 'Settings' }
-              )}>
-            <Text>Go to settng Tab</Text>
-          </TouchableOpacity> */}
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Course')
             }>
-            <Text>ECE 216</Text>
+            <Text style={{ fontWeight: 'bold' }}>ECE 216</Text>
+            <Text>1 active user</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Course')
             }>
-            <Text>ECE 221</Text>
+            <Text style={{ fontWeight: 'bold' }}>ECE 221</Text>
+            <Text>2 active users</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Course')
             }>
-            <Text>ECE 231</Text>
+            <Text style={{ fontWeight: 'bold' }}>ECE 231</Text>
+            <Text>3 active users</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Course')
             }>
-            <Text>ECE 243</Text>
+            <Text style={{ fontWeight: 'bold' }}>ECE 243</Text>
+            <Text>4 active users</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Details')
+              () => navigation.navigate('Course')
             }>
-            <Text>ECE 297</Text>
+            <Text style={{ fontWeight: 'bold' }}>ECE 297</Text>
+            <Text>9 active users</Text>
           </TouchableOpacity>
         </View>
         <Text
