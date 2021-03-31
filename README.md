@@ -16,6 +16,7 @@ You need to have certain dependencies installed to run the app on Expo. This inc
     "expo-status-bar": "~1.0.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-feather": "^2.0.9",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
     "react-native-elements": "^3.3.2",
     "react-native-gesture-handler": "~1.8.0",
