@@ -24,88 +24,43 @@ const EditProfileScreen = () => {
                             
          <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Name: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-          />
+          <Text>Name: Chloe Bell </Text>
           
         </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Bio: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text> Bio: I love dogs !</Text>
          </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Section: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text>Section: LEC101 </Text>
          </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Preferred Studying Time: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text>Preferred Study Time: 9 pm - 11 pm </Text>
         </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Timezone: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
-
+          <Text>Timezone: EST </Text>
          </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Favorite Course: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />  
+          <Text>Favourite Course: Electromagnetics </Text>
 
         </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Needs Help On: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text>Needs Help On: Computer and Digital Systems</Text>
 
         </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Working On: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text>Working On: Electromagnetics </Text>
 
         </View>
         <View style={styles.action}>
           <FontAwesome name="user-o" color="#666666" size={20} />
-          <TextInput
-            placeholder="Hobbies: "
-            placeholderTextColor="#666666"
-            autoCorrect={false}
-           
-          />
+          <Text>Hobbies: horseback riding, reading, swimming, TV</Text>
        
         </View>
         <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
