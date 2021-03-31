@@ -8,16 +8,14 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import {useTheme} from 'react-native-paper';
-
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import Feather from 'react-native-vector-icons/Feather';
 
-import BottomSheet from 'reanimated-bottom-sheet';
-import Animated from 'react-native-reanimated';
-
-import ImagePicker from 'react-native-image-crop-picker';
+// import {useTheme} from 'react-native-paper';
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import Feather from 'react-native-vector-icons/Feather';
+// import BottomSheet from 'reanimated-bottom-sheet';
+// import Animated from 'react-native-reanimated';
+// import ImagePicker from 'react-native-image-crop-picker';
 
 const ProfileEdit = () => {
 
@@ -143,10 +141,10 @@ const ProfileEdit = () => {
         return (
             <View style={styles.container}>
               <View style={styles.action}>
-          <FontAwesome name="user-o" color="##42f4" size={20} />
+          <FontAwesome name="user-o" color="#666666" size={20} />
           <TextInput
             placeholder="First Name__ Last Name"
-            placeholderTextColor="##42f4"
+            placeholderTextColor="#666666"
             autoCorrect={false}
            
           />
@@ -304,8 +302,8 @@ const styles = StyleSheet.create({
   },
   action: {
     flexDirection: 'row',
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 8, // changed from 10 to 8 so that "Submit" shows
+    marginBottom: 5, // changed from 10 to 5 so that "Submit" shows
     borderBottomWidth: 1,
     borderBottomColor: '#f2f2f2',
     paddingBottom: 5,

@@ -28,6 +28,13 @@ const FriendsScreen = ({ route, navigation }) => {
           <TouchableOpacity
             style={styles.button}
             onPress={
+              () => navigation.navigate('Messages')
+            }>
+            <Text>My Messages</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.button}
+            onPress={
               () => navigation.navigate('FriendInformation')
             }>
             <Text>Friends Information</Text>
