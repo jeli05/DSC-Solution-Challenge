@@ -28,34 +28,39 @@ const CreateProfileScreen = ({navigation}) => {
             </View>
 
             <View style={styles.footer}>
+                <Text>Bio</Text>
                 <TextInput
                     multiline
-                    placeholder = "Bio"
+                    placeholder = "Write anything you want about yourself"
                     style={styles.TextInput}  
                     onChangeText={(val)=>setBio(val)} />
 
+                <Text>Lecture Section</Text>
                 <TextInput
                     placeholder = "Section"
                     style={styles.TextInput}
                     autoCapitalize = 'none'
                     onChangeText={(val)=>setSection(val)} />
 
-
+                <Text>Preferred Study Time</Text>
                 <TextInput
-                    placeholder = "Preferred Studying Time" 
+                    placeholder = "e.g 8 pm - 9 pm" 
                     style={styles.TextInput}
                     onChangeText={(val)=>setPreferredTime(val)} />
 
+                <Text>Favourite Course</Text>
                 <TextInput
                     placeholder = "Favourite Course" 
                     style={styles.TextInput}
                     onChangeText={(val)=>setFavouriteCourse(val)} />
 
+                <Text>Needs Help On</Text>
                 <TextInput
-                    placeholder = "Needs Help On" 
+                    placeholder = "Courses/Subjects/Assignments You're Struggling With" 
                     style={styles.TextInput}
                     onChangeText={(val)=>setNeedHelp(val)} />
 
+                <Text>Hobbies</Text>
                 <TextInput
                     multiline
                     placeholder = "Hobbies" 
@@ -121,7 +126,7 @@ const styles=StyleSheet.create({
     button: {
         color: '#1d4e1f',
         alignItems: 'center',
-        marginTop: 50
+        marginTop: 20
     },
     textSign: {
         fontSize: 24, 
