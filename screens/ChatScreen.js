@@ -4,7 +4,8 @@ import {
     StyleSheet,
     View,
     Text,
-    SafeAreaView
+    SafeAreaView,
+    Image
   } from 'react-native';
 
 const ChatScreen = ({navigation}) => {
@@ -17,14 +18,17 @@ const ChatScreen = ({navigation}) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text
+          <Image 
+            // style={{ width: 340, height: 500, marginBottom: 0 }}
+            source={require('../images/Chatv2.png')}/>
+          {/* <Text
             style={{
               fontSize: 25,
               textAlign: 'center',
               marginBottom: 16
             }}>
             A screenshot of the chat interface should suffice for now
-          </Text>
+          </Text> */}
         </View>
         <Text
           style={{
