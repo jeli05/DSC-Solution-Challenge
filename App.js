@@ -15,43 +15,63 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
+import { 
+  createDrawerNavigator 
+} from "@react-navigation/drawer";
 
 import HomeScreen from './screens/HomeScreen';
-import DetailsScreen from './screens/DetailsScreen';
+import CourseScreen from './screens/CourseScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import RoomScreen from './screens/RoomScreen';
+import FriendsScreen from './screens/FriendsScreen';
+import MessagesScreen from './screens/MessagesScreen';
+import ChatScreen from './screens/ChatScreen';
+import FriendInformation from './screens/FriendInformation';
+import ProfileEdit from './screens/ProfileEdit';
 import LoginScreen from './screens/LoginScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import CreateProfileScreen from './screens/CreateProfileScreen';
+import GetStartedScreen from './screens/GetStartedScreen';
+
+// import RootStackScreen from './screens/RootStackScreen';
+
 import { Settings } from 'react-native';
+import { Navigation } from 'react-feather';
+import { RotationGestureHandler } from 'react-native-gesture-handler';
+import { Drawer } from 'react-native-paper';
+
 
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+// const Drawers = createDrawerNavigator();   
 
 function LoginStack() {
   return (
     <Stack.Navigator
-      initialRouteName="Login">
-        <Stack.Screen
-          name="Login"
-          component={LoginScreen}
-          options={{ title: 'Login Page'}} />
+      initialRouteName="GetStarted">
+      <Stack.Screen 
+        name="GetStarted"
+        component={GetStartedScreen}
+        options={{ headerShown: false }}/>
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}/>
       <Stack.Screen
         name="SignUp"
-        component={SignUpScreen} 
-        options={{ title: 'Sign Up Page'}}/>
+        component={SignUpScreen}
+        options={{ headerShown: false }}/>
       <Stack.Screen
         name="CreateProfile"
         component={CreateProfileScreen}
-        options={{ title: 'Create Profile Page'}} />
-    </Stack.Navigator>
+        options={{ headerShown: false }} />
+      </Stack.Navigator>
   );
 }
-
 
 function HomeStack() {
   return (
@@ -67,13 +87,42 @@ function HomeStack() {
           component={HomeScreen}
           options={{ title: 'Home Page' }}/>
         <Stack.Screen
-          name="Details"
-          component={DetailsScreen}
+          name="Course"
+          component={CourseScreen}
           options={{ title: 'Course Page' }} />
         <Stack.Screen
           name="Room"
           component={RoomScreen}
           options={{ title: 'Room Call' }} />
+      </Stack.Navigator>
+  );
+}
+
+function FriendsStack() {
+  return (
+      <Stack.Navigator
+        initialRouteName="Friends"
+        screenOptions={{
+          headerStyle: { backgroundColor: '#42f44b' },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: 'bold' }
+        }}>
+        <Stack.Screen
+          name="Friends"
+          component={FriendsScreen}
+          options={{ title: 'My Friends' }}/>
+        <Stack.Screen
+          name="Messages"
+          component={MessagesScreen}
+          options={{ title: 'My Messages' }} />
+        <Stack.Screen
+          name="FriendInformation"
+          component={FriendInformation}
+          options={{ title: 'My Friends Profile' }}/>
+        <Stack.Screen
+          name="Chat"
+          component={ChatScreen}
+          options={{ title: 'Chat with ___' }} />
       </Stack.Navigator>
   );
 }
@@ -91,10 +140,10 @@ function ProfileStack() {
         name="Profile"
         component={ProfileScreen}
         options={{ title: 'Profile Page' }}/>
-      {/* <Stack.Screen
-        name="Details"
-        component={DetailsScreen}
-        options={{ title: 'Details Page' }}/> */}
+       <Stack.Screen
+        name="ProfileEdit"
+        component={ProfileEdit}
+        options={{ title: 'Edit Profile' }}/>
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
@@ -112,9 +161,17 @@ function App() {
           activeTintColor: '#42f44b',
         }}>
         <Tab.Screen
-          name="Login"
+          name="LoginStack"
           component={LoginStack}
-        />
+          options={{
+            tabBarLabel: 'Log Out',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name='logout'
+                color={color}
+                size={size} />
+            ),
+           }} />
         <Tab.Screen
           name="HomeStack"
           component={HomeStack}
@@ -123,6 +180,19 @@ function App() {
             tabBarIcon: ({ color, size }) => (
               <MaterialCommunityIcons
                 name="home"
+                color={color}
+                size={size}
+              />
+            ),
+          }}  />
+        <Tab.Screen
+          name="FriendsStack"
+          component={FriendsStack}
+          options={{
+            tabBarLabel: 'Friends',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="account-group"
                 color={color}
                 size={size}
               />
@@ -145,4 +215,5 @@ function App() {
     </NavigationContainer>
   );
 }
+
 export default App;
