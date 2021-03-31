@@ -7,7 +7,7 @@ import {
   SafeAreaView
 } from 'react-native';
 
-const HomeScreen = ({ navigation }) => {
+const FriendsScreen = ({ route, navigation }) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1, padding: 16 }}>
@@ -21,49 +21,23 @@ const HomeScreen = ({ navigation }) => {
             style={{
               fontSize: 25,
               textAlign: 'center',
-              // marginBottom: 0
+              marginBottom: 16
             }}>
-            My courses
+            Friends
           </Text>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Course')
+              () => navigation.navigate('Messages')
             }>
-            <Text style={{ fontWeight: 'bold' }}>ECE 216</Text>
-            <Text>1 active user</Text>
+            <Text>My Messages</Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
             onPress={
-              () => navigation.navigate('Course')
+              () => navigation.navigate('FriendInformation')
             }>
-            <Text style={{ fontWeight: 'bold' }}>ECE 221</Text>
-            <Text>2 active users</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Course')
-            }>
-            <Text style={{ fontWeight: 'bold' }}>ECE 231</Text>
-            <Text>3 active users</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Course')
-            }>
-            <Text style={{ fontWeight: 'bold' }}>ECE 243</Text>
-            <Text>4 active users</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={
-              () => navigation.navigate('Course')
-            }>
-            <Text style={{ fontWeight: 'bold' }}>ECE 297</Text>
-            <Text>9 active users</Text>
+            <Text>Friends Information</Text>
           </TouchableOpacity>
         </View>
         <Text
@@ -84,7 +58,6 @@ const HomeScreen = ({ navigation }) => {
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
@@ -94,4 +67,4 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
 });
-export default HomeScreen;
+export default FriendsScreen;

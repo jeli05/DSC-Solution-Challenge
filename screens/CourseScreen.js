@@ -6,8 +6,9 @@ import {
   Text,
   SafeAreaView
 } from 'react-native';
+import { Button, Icon, Avatar, ListItem } from 'react-native-elements';
 
-const DetailsScreen = ({navigation}) => {
+const CourseScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
@@ -31,6 +32,14 @@ const DetailsScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>General Course Room</Text>
+            <Avatar
+                size="small"
+                overlayContainerStyle={{backgroundColor: 'blue'}}
+                rounded
+                title={"CB"}
+                activeOpacity={0.7}
+                onPress={ () => navigation.navigate('FriendInformation') }
+            />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -38,6 +47,14 @@ const DetailsScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>Room 1</Text>
+            <Avatar
+                size="small"
+                overlayContainerStyle={{backgroundColor: 'blue'}}
+                rounded
+                title={"JL"}
+                activeOpacity={0.7}
+                onPress={ () => navigation.navigate('FriendInformation') }
+            />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -45,6 +62,14 @@ const DetailsScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>Room 2</Text>
+            <Avatar
+                size="small"
+                overlayContainerStyle={{backgroundColor: 'blue'}}
+                rounded
+                title={"SG"}
+                activeOpacity={0.7}
+                onPress={ () => navigation.navigate('FriendInformation') }
+            />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -52,6 +77,14 @@ const DetailsScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>Room 3</Text>
+            <Avatar
+                size="small"
+                overlayContainerStyle={{backgroundColor: 'blue'}}
+                rounded
+                title={"AM"}
+                activeOpacity={0.7}
+                onPress={ () => navigation.navigate('FriendInformation') }
+            />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -89,4 +122,4 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
 });
-export default DetailsScreen;
+export default CourseScreen;

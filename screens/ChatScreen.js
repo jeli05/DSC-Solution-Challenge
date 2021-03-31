@@ -4,31 +4,27 @@ import {
     StyleSheet,
     View,
     Text,
-    SafeAreaView,
-    Image
+    SafeAreaView
   } from 'react-native';
 
-const RoomScreen = ({navigation}) => {
+const ChatScreen = ({navigation}) => {
   return (
-    <SafeAreaView style={{ flex: 0.95 }}>
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={{ flex: 1 , padding: 16}}>
         <View
           style={{
-            flex: 0,
+            flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Image 
-            // style={{ width: 340, height: 500, marginBottom: 0 }}
-            source={require('../images/Callv6.png')}/>
-          {/* <Text
+          <Text
             style={{
               fontSize: 25,
               textAlign: 'center',
               marginBottom: 16
             }}>
-            A screenshot of the call interface should suffice for now
-          </Text> */}
+            A screenshot of the chat interface should suffice for now
+          </Text>
         </View>
         <Text
           style={{
@@ -53,9 +49,9 @@ const styles = StyleSheet.create({
     button: {
       alignItems: 'center',
       backgroundColor: '#DDDDDD',
-      padding: 0,
+      padding: 10,
       width: 300,
-      marginTop: 0,
+      marginTop: 16,
     },
   });
-export default RoomScreen;
+export default ChatScreen;

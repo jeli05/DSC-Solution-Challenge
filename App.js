@@ -34,8 +34,6 @@ import SignUpScreen from './screens/SignUpScreen';
 import CreateProfileScreen from './screens/CreateProfileScreen';
 import GetStartedScreen from './screens/GetStartedScreen';
 
-// import RootStackScreen from './screens/RootStackScreen';
-
 import { Settings } from 'react-native';
 import { Navigation } from 'react-feather';
 import { RotationGestureHandler } from 'react-native-gesture-handler';
