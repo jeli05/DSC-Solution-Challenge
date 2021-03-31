@@ -16,7 +16,7 @@ const GetStartedScreen = ({navigation}) =>{
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.titles}>App Name</Text>
+                <Text style={styles.titles}>CONNECT</Text>
             </View>
             <View style={styles.footer}>
                 <Text style={styles.text}>Study and Connect With Your Peers !</Text>
