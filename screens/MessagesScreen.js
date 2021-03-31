@@ -17,21 +17,25 @@ const list = [
   {
     name: 'Chloe Bell',
     avatar: 'CB',
+    color: '#b2e289'
     // subtitle: 'N/A'
   },
   {
     name: 'Stephanie Gao',
     avatar: 'SG',
+    color: '#9fa3e3'
     // subtitle: 'N/A'
   },
   {
     name: 'Anmol Mahajan',
     avatar: 'AM',
+    color: '#51c0bf'
     // subtitle: 'N/A'
   },
   {
     name: 'Jeff Li',
     avatar: 'JL',
+    color: '#8db6c7'
     // subtitle: 'N/A'
   },
   // more items
@@ -48,7 +52,8 @@ const MessagesScreen = ({navigation}) => {
             justifyContent: 'center',
           }}>
           <Icon
-            name='plus'
+            size={50}
+            name='pencil'
             type='evilicon'
             color='#517fa4'
             onPress={
@@ -62,14 +67,14 @@ const MessagesScreen = ({navigation}) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text
+          {/* <Text
             style={{
               fontSize: 25,
               textAlign: 'center',
               marginBottom: 16
             }}>
             [Searchbar will go here]
-          </Text>
+          </Text> */}
         </View>
         <View>
           {
@@ -77,7 +82,7 @@ const MessagesScreen = ({navigation}) => {
               <ListItem key={i} bottomDivider onPress={ () => navigation.navigate('Chat') }>
                 <Avatar
                   size="small"
-                  overlayContainerStyle={{backgroundColor: 'blue'}}
+                  overlayContainerStyle={{backgroundColor: l.color}}
                   rounded
                   title={l.avatar}
                   activeOpacity={0.7}
@@ -87,6 +92,7 @@ const MessagesScreen = ({navigation}) => {
                   <ListItem.Title>{l.name}</ListItem.Title>
                   {/* <ListItem.Subtitle>{l.subtitle}</ListItem.Subtitle> */}
                 </ListItem.Content>
+                <ListItem.Chevron />
               </ListItem>
             ))
           }

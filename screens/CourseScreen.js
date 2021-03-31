@@ -22,7 +22,7 @@ const CourseScreen = ({navigation}) => {
             style={{
               fontSize: 25,
               textAlign: 'center',
-              marginBottom: 16
+              // marginBottom: 16
             }}>
             Welcome to ECE ___
           </Text>
@@ -32,14 +32,47 @@ const CourseScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>General Course Room</Text>
+            <View
+            style={{
+              flex: 0,
+              marginTop: 5,
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row'
+            }}>
             <Avatar
-                size="small"
-                overlayContainerStyle={{backgroundColor: 'blue'}}
-                rounded
-                title={"CB"}
-                activeOpacity={0.7}
-                onPress={ () => navigation.navigate('FriendInformation') }
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'orange'}}
+              rounded
+              title={'CB'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
             />
+            <Avatar
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'blue'}}
+              rounded
+              title={'JL'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
+            />
+            <Avatar
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'green'}}
+              rounded
+              title={'AM'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
+            />
+            <Avatar
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'purple'}}
+              rounded
+              title={'SG'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
+            />
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -47,14 +80,31 @@ const CourseScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>Room 1</Text>
+            <View
+            style={{
+              flex: 0,
+              marginTop: 5,
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row'
+            }}>
             <Avatar
-                size="small"
-                overlayContainerStyle={{backgroundColor: 'blue'}}
-                rounded
-                title={"JL"}
-                activeOpacity={0.7}
-                onPress={ () => navigation.navigate('FriendInformation') }
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'red'}}
+              rounded
+              title={'AA'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
             />
+            <Avatar
+              size="small"
+              overlayContainerStyle={{backgroundColor: 'pink'}}
+              rounded
+              title={'ZZ'}
+              activeOpacity={0.7}
+              onPress={ () => navigation.navigate('FriendInformation') }
+            />
+            </View>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
@@ -64,9 +114,9 @@ const CourseScreen = ({navigation}) => {
             <Text>Room 2</Text>
             <Avatar
                 size="small"
-                overlayContainerStyle={{backgroundColor: 'blue'}}
+                overlayContainerStyle={{backgroundColor: 'brown'}}
                 rounded
-                title={"SG"}
+                title={"FL"}
                 activeOpacity={0.7}
                 onPress={ () => navigation.navigate('FriendInformation') }
             />
@@ -77,14 +127,6 @@ const CourseScreen = ({navigation}) => {
               () => navigation.navigate('Room')
             }>
             <Text>Room 3</Text>
-            <Avatar
-                size="small"
-                overlayContainerStyle={{backgroundColor: 'blue'}}
-                rounded
-                title={"AM"}
-                activeOpacity={0.7}
-                onPress={ () => navigation.navigate('FriendInformation') }
-            />
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.button}
