@@ -34,6 +34,8 @@ import SignUpScreen from './screens/SignUpScreen';
 import CreateProfileScreen from './screens/CreateProfileScreen';
 import GetStartedScreen from './screens/GetStartedScreen';
 
+// import RootStackScreen from './screens/RootStackScreen';
+
 import { Settings } from 'react-native';
 import { Navigation } from 'react-feather';
 import { RotationGestureHandler } from 'react-native-gesture-handler';
@@ -76,7 +78,7 @@ function HomeStack() {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerStyle: { backgroundColor: '#42f44b' },
+          headerStyle: { backgroundColor: '#7dc47f' },
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
@@ -101,7 +103,7 @@ function FriendsStack() {
       <Stack.Navigator
         initialRouteName="Friends"
         screenOptions={{
-          headerStyle: { backgroundColor: '#42f44b' },
+          headerStyle: { backgroundColor: '#7dc47f' },
           headerTintColor: '#fff',
           headerTitleStyle: { fontWeight: 'bold' }
         }}>
@@ -130,7 +132,7 @@ function ProfileStack() {
     <Stack.Navigator
       initialRouteName="Profile"
       screenOptions={{
-        headerStyle: { backgroundColor: '#42f44b' },
+        headerStyle: { backgroundColor: '#7dc47f' },
         headerTintColor: '#fff',
         headerTitleStyle: { fontWeight: 'bold' }
       }}>
@@ -156,7 +158,7 @@ function App() {
       <Tab.Navigator
         initialRouteName="Feed"
         tabBarOptions={{
-          activeTintColor: '#42f44b',
+          activeTintColor: '#7dc47f',
         }}>
         <Tab.Screen
           name="LoginStack"
