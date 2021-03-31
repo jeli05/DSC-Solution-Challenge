@@ -15,9 +15,9 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
-import { 
-  createDrawerNavigator 
-} from "@react-navigation/drawer";
+// import { 
+//   createDrawerNavigator 
+// } from "@react-navigation/drawer";
 
 import HomeScreen from './screens/HomeScreen';
 import CourseScreen from './screens/CourseScreen';
@@ -36,10 +36,10 @@ import GetStartedScreen from './screens/GetStartedScreen';
 
 // import RootStackScreen from './screens/RootStackScreen';
 
-import { Settings } from 'react-native';
-import { Navigation } from 'react-feather';
-import { RotationGestureHandler } from 'react-native-gesture-handler';
-import { Drawer } from 'react-native-paper';
+// import { Settings } from 'react-native';
+// import { Navigation } from 'react-feather';
+// import { RotationGestureHandler } from 'react-native-gesture-handler';
+// import { Drawer } from 'react-native-paper';
 
 
 
@@ -85,7 +85,7 @@ function HomeStack() {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{ title: 'Home Page' }}/>
+          options={{ title: 'Home' }}/>
         <Stack.Screen
           name="Course"
           component={CourseScreen}
@@ -118,7 +118,7 @@ function FriendsStack() {
         <Stack.Screen
           name="FriendInformation"
           component={FriendInformation}
-          options={{ title: 'My Friends Profile' }}/>
+          options={{ title: 'Friend Profile' }}/>
         <Stack.Screen
           name="Chat"
           component={ChatScreen}
@@ -139,7 +139,7 @@ function ProfileStack() {
       <Stack.Screen
         name="Profile"
         component={ProfileScreen}
-        options={{ title: 'Profile Page' }}/>
+        options={{ title: 'Profile' }}/>
        <Stack.Screen
         name="ProfileEdit"
         component={ProfileEdit}
@@ -147,7 +147,7 @@ function ProfileStack() {
       <Stack.Screen
         name="Settings"
         component={SettingsScreen}
-        options={{ title: 'Settings Page' }}/>
+        options={{ title: 'Settings' }}/>
     </Stack.Navigator>
   );
 }
