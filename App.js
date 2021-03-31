@@ -15,6 +15,9 @@ import {
 import {
   createBottomTabNavigator
 } from '@react-navigation/bottom-tabs';
+import { 
+  createDrawerNavigator 
+} from "@react-navigation/drawer";
 
 import HomeScreen from './screens/HomeScreen';
 import CourseScreen from './screens/CourseScreen';
@@ -26,12 +29,47 @@ import MessagesScreen from './screens/MessagesScreen';
 import ChatScreen from './screens/ChatScreen';
 import FriendInformation from './screens/FriendInformation';
 import ProfileEdit from './screens/ProfileEdit';
+import LoginScreen from './screens/LoginScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import CreateProfileScreen from './screens/CreateProfileScreen';
+import GetStartedScreen from './screens/GetStartedScreen';
+
 import { Settings } from 'react-native';
+import { Navigation } from 'react-feather';
+import { RotationGestureHandler } from 'react-native-gesture-handler';
+import { Drawer } from 'react-native-paper';
+
+
 
 // credit to https://aboutreact.com/react-native-bottom-navigation/ for main structure
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+// const Drawers = createDrawerNavigator();   
+
+function LoginStack() {
+  return (
+    <Stack.Navigator
+      initialRouteName="GetStarted">
+      <Stack.Screen 
+        name="GetStarted"
+        component={GetStartedScreen}
+        options={{ headerShown: false }}/>
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}/>
+      <Stack.Screen
+        name="SignUp"
+        component={SignUpScreen}
+        options={{ headerShown: false }}/>
+      <Stack.Screen
+        name="CreateProfile"
+        component={CreateProfileScreen}
+        options={{ headerShown: false }} />
+      </Stack.Navigator>
+  );
+}
 
 function HomeStack() {
   return (
@@ -121,6 +159,18 @@ function App() {
           activeTintColor: '#42f44b',
         }}>
         <Tab.Screen
+          name="LoginStack"
+          component={LoginStack}
+          options={{
+            tabBarLabel: 'Log Out',
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name='logout'
+                color={color}
+                size={size} />
+            ),
+           }} />
+        <Tab.Screen
           name="HomeStack"
           component={HomeStack}
           options={{
@@ -163,4 +213,5 @@ function App() {
     </NavigationContainer>
   );
 }
+
 export default App;
