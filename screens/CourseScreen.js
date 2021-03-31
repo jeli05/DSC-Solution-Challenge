@@ -24,7 +24,8 @@ const CourseScreen = ({navigation}) => {
               textAlign: 'center',
               // marginBottom: 16
             }}>
-            Welcome to ECE ___
+            Welcome to ECE 243
+            {/* Welcome to ECE ___ */}
           </Text>
           <TouchableOpacity
             style={styles.button}

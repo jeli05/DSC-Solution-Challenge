@@ -51,7 +51,22 @@ const ProfileScreen = ({ route, navigation }) => {
             onPress={
               () => navigation.navigate('ProfileEdit')
             }>
+            <View
+            style={{
+              flex: 0,
+              marginTop: 0,
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'row'
+            }}>
+            <Icon
+            size={25}
+            name='pencil'
+            type='evilicon'
+            color='#517fa4'
+            />
             <Text>Edit Profile</Text>
+            </View>
           </TouchableOpacity>
             
           </View>
@@ -60,47 +75,42 @@ const ProfileScreen = ({ route, navigation }) => {
 
       <View style={styles.userInfoSection}>
         <View style={styles.row}>
-          {/* <Icon name="Bio" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>Add anything you want</Text>
-        </View>
-        <View style={styles.row}>
           {/* <Icon name="profile" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>First name_last name</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Name: FirstName LastName</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Email" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>emailid@mail.utoronto.ca</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Email: email@mail.utoronto.ca</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Section" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>101/102</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Section: 101/102</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Preferred studying time" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>24 hour clock</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Preferred studying time: in the evening</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Timezone" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>__EST time</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Timezone: EST</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Favorite Course" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>JRE 420</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Favourite course: JRE 420</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Needs help on" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>ECE291</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Needs help on: ECE 243</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Working on" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>APS263</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Working on: APS 263</Text>
         </View>
         <View style={styles.row}>
           {/* <Icon name="Hobbies" color="#777777" size={40}/> */}
-          <Text style={{color:"#777777", marginLeft: 30}}>Activities of choice</Text>
+          <Text style={{color:"#777777", marginLeft: 30}}>Hobbies: singing, swimming</Text>
         </View>
       </View>
-     
     </SafeAreaView>
   );
 };

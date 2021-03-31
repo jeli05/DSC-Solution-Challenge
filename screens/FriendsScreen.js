@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Button, Icon, Avatar } from 'react-native-elements';
 import {
   TouchableOpacity,
   StyleSheet,
@@ -13,18 +14,10 @@ const FriendsScreen = ({ route, navigation }) => {
       <View style={{ flex: 1, padding: 16 }}>
         <View
           style={{
-            flex: 1,
+            flex: 0,
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              marginBottom: 16
-            }}>
-            Friends
-          </Text>
           <TouchableOpacity
             style={styles.button}
             onPress={
@@ -32,28 +25,64 @@ const FriendsScreen = ({ route, navigation }) => {
             }>
             <Text>My Messages</Text>
           </TouchableOpacity>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={styles.button}
             onPress={
               () => navigation.navigate('FriendInformation')
             }>
             <Text>Friends Information</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
         <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              marginTop: 16,
+              textDecorationLine: 'underline'
+            }}>
+            Friends
+          </Text>
+        <View
           style={{
-            fontSize: 18,
-            textAlign: 'center',
-            color: 'grey'
+            flex: 0,
+            marginTop: 20,
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row'
           }}>
-        </Text>
-        <Text
-          style={{
-            fontSize: 16,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-        </Text>
+          <Avatar
+            size="medium"
+            overlayContainerStyle={{backgroundColor: 'orange'}}
+            rounded
+            title={'CB'}
+            activeOpacity={0.7}
+            onPress={ () => navigation.navigate('FriendInformation') }
+          />
+          <Avatar
+            size="medium"
+            overlayContainerStyle={{backgroundColor: 'blue'}}
+            rounded
+            title={'JL'}
+            activeOpacity={0.7}
+            onPress={ () => navigation.navigate('FriendInformation') }
+          />
+          <Avatar
+            size="medium"
+            overlayContainerStyle={{backgroundColor: 'green'}}
+            rounded
+            title={'AM'}
+            activeOpacity={0.7}
+            onPress={ () => navigation.navigate('FriendInformation') }
+          />
+          <Avatar
+            size="medium"
+            overlayContainerStyle={{backgroundColor: 'purple'}}
+            rounded
+            title={'SG'}
+            activeOpacity={0.7}
+            onPress={ () => navigation.navigate('FriendInformation') }
+          />
+        </View>
       </View>
     </SafeAreaView>
   );
